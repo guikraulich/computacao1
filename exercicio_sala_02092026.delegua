@@ -1,0 +1,22 @@
+// declarando variáveis e atribuindo valores
+var valor = inteiro
+var i = 1
+var soma = inteiro
+var media = real
+soma = 0
+// fazendo estrutura de repetição
+enquanto (i <= 10) {
+    valor = inteiro(leia("Digite um número inteiro positivo"))
+    escreva("Número ${valor}")
+    se (valor < 0) {
+        escreva("Número negativo inválido. Saindo da estrutura...")
+        sustar
+    }
+    i = i + 1
+    soma = soma + valor
+}
+//imprimindo resultado
+escreva("A soma é ${soma}")
+i = i - 1
+media = soma / i
+escreva("A média é ${media}")
