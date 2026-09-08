@@ -1,0 +1,38 @@
+// Declarando variaveis e atribuindo valores
+var maiornome = texto
+var nome = texto
+var soma = inteiro
+var maiormedia = real
+var nota1 = real
+var nota2 = real
+var media = real
+var i = 1
+maiormedia = 0
+soma = 0
+// Fazendo a estrutura de repetição
+enquanto (i <= 10) {
+    nome = texto(leia("Digite seu nome"))
+    escreva("${i}-Nome: ${nome}")
+    nota1 = real(leia("Digite sua primeira nota"))
+    nota2 = real(leia("Digite sua segunda nota"))
+    se (nota1 < 0 ou nota2 < 0) {
+        escreva("Número negativo inválido. Saindo da estrutura...")
+        sustar
+    }
+    escreva("Nota 1: ${nota1}")
+    escreva("Nota 2: ${nota2}")
+    media = (nota1 * 2 + nota2 * 3) / 5
+    escreva("A média é ${media}")
+    se (media < 6) {
+        escreva("Lamento ${nome}, você foi reprovado")
+    } senão {
+        escreva("${nome}, você foi aprovado")
+    }
+    i = i + 1
+    se (media > maiormedia) {
+        maiormedia = media
+        maiornome = nome
+    }
+    escreva("")
+}
+escreva("A maior média é ${maiormedia} de ${maiornome}")
