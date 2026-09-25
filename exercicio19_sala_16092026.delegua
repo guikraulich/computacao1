@@ -1,0 +1,44 @@
+//exercicio 19
+var alunos
+var i
+var soma = real
+var nome = []
+var nota1 = real
+var nota2 = real
+var mediapon = []
+var abaixocinco = []
+var media_aluno = real
+var media_das_medias = real
+soma = 0
+
+alunos = inteiro(leia("Digite o número de alunos:"))
+enquanto(alunos<=0){
+alunos = inteiro(leia("Número negativo inválido, digite novamente o número de alunos:"))
+}
+
+para(i=0;i<alunos;i++){
+nome.adicionar(leia("Digite o nome do aluno:"))
+escreva("${i+1}-Nome: ${nome[i]}")
+nota1 = real(leia("Digite a primeira nota"))
+escreva(" Primeira nota: ${nota1}")
+nota2 = real(leia("Digite a segunda nota"))
+escreva(" Segunda nota: ${nota2}")
+media_aluno = (nota1*3+nota2*4)/7
+mediapon.adicionar(media_aluno)
+escreva(" Média ponderada: ${arredondar(mediapon[i],2)}")
+escreva("")
+soma = soma + mediapon[i]
+}
+
+media_das_medias = soma/alunos
+para(i=0;i<alunos;i++){
+se(mediapon[i]< 5 ou mediapon[i]<media_das_medias){
+abaixocinco.adicionar(i)
+}
+}
+escreva("A média das médias é: ${arredondar(media_das_medias,2)}")
+escreva("")
+escreva("Alunos com media ponderada menor ou igual a 5 ou a ${arredondar(media_das_medias,2)}: ")
+para cada item em abaixocinco{
+escreva(" ${nome[item]}: ${arredondar(mediapon[item],2)}")
+}
