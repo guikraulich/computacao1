@@ -1,0 +1,35 @@
+//Definição da constante N
+const N = 6
+//Definindo as variáveis utilizadas
+var nota1 = real
+var nota2 = real
+var nota3 = real
+var media_ponderada =real
+var soma_medias = 0
+var media_das_medias = real
+var palpite = inteiro
+
+//Estrutura de repetição para leitura e cálculo das notas
+para (var i = 0; i < N; i=i+1){
+    nota1 = real(leia("Digite nota 1:"))
+    nota2 = real(leia("Digite nota 2:"))
+    nota3 = real(leia("Digite nota 3:"))
+    media_ponderada = (nota1*4 + nota2*6 + nota3*3)/13
+    escreva("A média ponderada é: ${media_ponderada}")
+    soma_medias = soma_medias + media_ponderada
+}
+//Convertendo resultado final para número inteiro
+media_das_medias = inteiro(soma_medias/N)
+
+//Parte 2: Adivinhação da soma das médias com loop indeterminado
+palpite = inteiro(leia("Qual valor da média das médias?"))
+
+enquanto(palpite != media_das_medias){
+    se (palpite>media_das_medias){
+    escreva("Valor alto demais!")
+    } senao se (palpite<media_das_medias){
+    escreva("Valor baixo demais!")
+    }
+palpite = inteiro(leia("Qual o valor da média das médias?"))
+}
+escreva("Parabéns! Você acertou!")
