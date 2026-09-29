@@ -1,0 +1,26 @@
+//Definindo as variáveis utilizadas
+var cintura = real
+var altura = real
+var sapato = inteiro
+var indiceA = real
+var indiceB = real
+
+//Leitura de dados de entrada
+    cintura = real(leia("Qual a medida da sua cintura?"))
+    altura = real(leia("Qual a medida da sua altura?"))
+    sapato = inteiro(leia("Qual número de sapato você calça?"))
+
+//Cálculo dos índices
+    indiceA = cintura*(sapato-(altura*10))
+    indiceB = (sapato+altura*10)-(cintura*10)
+    escreva("indiceA é ${indiceA}")
+    escreva("indiceB é ${indiceB}")
+
+//Comparação e saída das mensagens
+    se (indiceA>indiceB){
+    escreva("indiceA é maior que indiceB")
+    } senao se (indiceA<indiceB){
+    escreva("indiceA é menor que indiceB")
+    } senao{
+    escreva("indiceA e indiceB são iguais")
+    }
